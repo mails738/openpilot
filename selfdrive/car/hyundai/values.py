@@ -383,6 +383,31 @@ FW_VERSIONS = {
       b'\xf1\x00DH LKAS 1.5 -140425',
     ],
   },
+  CAR.HYUNDAO_I20: {
+    #done
+    (Ecu.fwdRadar, 0x7D0, None): [
+      b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    #done
+    (Ecu.eps, 0x7D4, None): [
+      b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
+    ],#done
+    (Ecu.fwdCamera, 0x7C4, None): [
+      b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
+    ],
+    #done
+    (Ecu.engine, 0x7E0, None): [
+      b'\xf1\x873910607196',
+    ],
+    #done
+    (Ecu.transmission, 0x7E1, None): [
+      b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
+    ],
+       #done
+    (Ecu.abs, 0x7D1, None): [
+      b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
+    ],
+  },
   CAR.IONIQ: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00AEhe SCC H-CUP      1.01 1.01 96400-G2000         ',
