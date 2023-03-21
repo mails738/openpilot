@@ -68,6 +68,7 @@ class CAR:
   # Hyundai
   ELANTRA = "HYUNDAI ELANTRA 2017"
   ELANTRA_2021 = "HYUNDAI ELANTRA 2021"
+  I20_2022 = "HYUNDAI I20 2022"
   ELANTRA_HEV_2021 = "HYUNDAI ELANTRA HYBRID 2021"
   HYUNDAI_GENESIS = "HYUNDAI GENESIS 2015-2016"
   IONIQ = "HYUNDAI IONIQ HYBRID 2017-2019"
@@ -150,6 +151,7 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
     HyundaiCarInfo("Hyundai i30 2017-19", harness=Harness.hyundai_e),
   ],
   CAR.ELANTRA_2021: HyundaiCarInfo("Hyundai Elantra 2021-23", video_link="https://youtu.be/_EdYQtV52-c", harness=Harness.hyundai_k),
+  CAR.I20_2022: HyundaiCarInfo("Hyundai I20 2022", video_link="https://youtu.be/_EdYQtV52-c", harness=Harness.hyundai_n),
   CAR.ELANTRA_HEV_2021: HyundaiCarInfo("Hyundai Elantra Hybrid 2021-23", video_link="https://youtu.be/_EdYQtV52-c", harness=Harness.hyundai_k),
   CAR.HYUNDAI_GENESIS: [
     HyundaiCarInfo("Hyundai Genesis 2015-16", min_enable_speed=19 * CV.MPH_TO_MS, harness=Harness.hyundai_j),  # TODO: check 2015 packages
@@ -383,45 +385,21 @@ FW_VERSIONS = {
       b'\xf1\x00DH LKAS 1.5 -140425',
     ],
   },
-  # CAR.HYUNDAO_I20: {
-  #   (Ecu.fwdRadar, 0x7D0, None): [
-  #     b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-  #   ],
-  #   (Ecu.eps, 0x7D4, None): [
-  #     b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
-  #   ],
-  #   (Ecu.fwdCamera, 0x7C4, None): [
-  #     b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
-  #   ],
-  #   (Ecu.engine, 0x7E0, None): [
-  #     b'\xf1\x873910607196',
-  #   ],
-  #   (Ecu.transmission, 0x7E1, None): [
-  #     b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
-  #   ],
-  #   (Ecu.abs, 0x7D1, None): [
-  #     b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
-  #   ],
-  # },
+
   CAR.IONIQ: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00AEhe SCC H-CUP      1.01 1.01 96400-G2000         ',
-      b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.eps, 0x7d4, None): [
       b'\xf1\x00AE  MDPS C 1.00 1.07 56310/G2301 4AEHC107',
-      b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
     ],
     (Ecu.fwdCamera, 0x7c4, None): [
       b'\xf1\x00AEH MFC  AT EUR LHD 1.00 1.00 95740-G2400 180222',
-      b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
     ],
     (Ecu.engine, 0x7e0, None): [
       b'\xf1\x816H6F2051\x00\x00\x00\x00\x00\x00\x00\x00',
-      b'\xf1\x873910607196',
     ],
     (Ecu.transmission, 0x7e1, None): [
-      b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
       b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
     ],
   },
@@ -1420,6 +1398,26 @@ FW_VERSIONS = {
       b'\xf1\x00PD__ SCC FNCUP      1.01 1.00 96400-G3000         ',
     ],
   },
+   CAR.I20_2022: {
+   (Ecu.fwdRadar, 0x7D0, None): [
+     b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+   ],
+   (Ecu.eps, 0x7D4, None): [
+     b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
+   ],
+   (Ecu.fwdCamera, 0x7C4, None): [
+     b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
+   ],
+   (Ecu.engine, 0x7E0, None): [
+     b'\xf1\x873910607196',
+   ],
+   (Ecu.transmission, 0x7E1, None): [
+     b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
+   ],
+   (Ecu.abs, 0x7D1, None): [
+     b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
+   ],
+ },
   CAR.ELANTRA_2021: {
     (Ecu.fwdRadar, 0x7d0, None): [
       b'\xf1\x00CN7_ SCC F-CUP      1.00 1.01 99110-AA000         ',
@@ -1678,7 +1676,7 @@ FW_VERSIONS = {
 }
 
 CHECKSUM = {
-  "crc8": [CAR.SANTA_FE, CAR.SONATA, CAR.PALISADE, CAR.KIA_SELTOS, CAR.ELANTRA_2021, CAR.ELANTRA_HEV_2021, CAR.SONATA_HYBRID, CAR.SANTA_FE_2022, CAR.KIA_K5_2021, CAR.SANTA_FE_HEV_2022, CAR.SANTA_FE_PHEV_2022, CAR.KIA_K5_HEV_2020],
+  "crc8": [CAR.SANTA_FE, CAR.SONATA, CAR.PALISADE, CAR.KIA_SELTOS, CAR.ELANTRA_2021, CAR.I20_2022, CAR.ELANTRA_HEV_2021, CAR.SONATA_HYBRID, CAR.SANTA_FE_2022, CAR.KIA_K5_2021, CAR.SANTA_FE_HEV_2022, CAR.SANTA_FE_PHEV_2022, CAR.KIA_K5_HEV_2020],
   "6B": [CAR.KIA_SORENTO, CAR.HYUNDAI_GENESIS],
 }
 
@@ -1709,6 +1707,7 @@ LEGACY_SAFETY_MODE_CAR = {CAR.HYUNDAI_GENESIS, CAR.IONIQ_EV_2020, CAR.IONIQ_EV_L
 DBC = {
   CAR.ELANTRA: dbc_dict('hyundai_kia_generic', None),
   CAR.ELANTRA_2021: dbc_dict('hyundai_kia_generic', None),
+  CAR.I20_2022: dbc_dict('hyundai_kia_generic', None),
   CAR.ELANTRA_HEV_2021: dbc_dict('hyundai_kia_generic', None),
   CAR.GENESIS_G70: dbc_dict('hyundai_kia_generic', None),
   CAR.GENESIS_G70_2020: dbc_dict('hyundai_kia_generic', 'hyundai_kia_mando_front_radar_generated'),
