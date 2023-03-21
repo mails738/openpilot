@@ -92,7 +92,7 @@ class CarInterface(CarInterfaceBase):
     elif candidate == CAR.I20_2022:
       ret.mass = 1125. + STD_CARGO_KG # müsste stimmen
       ret.wheelbase = 2.58 # stimmt
-      ret.steerRatio = 13.1 #according to #https://www.hyundai.news/newsroom/dam/de/Pressemappen/20201014_i20/Hyundai_i20_3_Technische_Daten_0621.pdf
+      ret.steerRatio = 13.1 #sstimmt
       tire_stiffness_factor = 0.65
     elif candidate == CAR.ELANTRA_HEV_2021:
       ret.mass = (3017. * CV.LB_TO_KG) + STD_CARGO_KG
