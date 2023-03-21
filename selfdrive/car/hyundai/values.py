@@ -1412,7 +1412,7 @@ FW_VERSIONS = {
      b'\xf1\x873910607196',
    ],
    (Ecu.transmission, 0x7E1, None): [
-     b'\xf1\x816U3H1051\x00\x00\xf1\x006U3H0_C2\x00\x006U3H1051\x00\x00HAE0G16US2\x00\x00\x00\x00',
+     b'\xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2',
    ],
    (Ecu.abs, 0x7D1, None): [
      b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
