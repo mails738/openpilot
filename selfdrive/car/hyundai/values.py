@@ -1406,7 +1406,7 @@ FW_VERSIONS = {
      b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
    ],
    (Ecu.fwdCamera, 0x7C4, None): [
-     b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
+     b'\xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
    ],
    (Ecu.engine, 0x7E0, None): [
      b'\xf1\x873910607196',
@@ -1420,6 +1420,7 @@ FW_VERSIONS = {
  },
   CAR.ELANTRA_2021: {
     (Ecu.fwdRadar, 0x7d0, None): [
+      #b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x00CN7_ SCC F-CUP      1.00 1.01 99110-AA000         ',
       b'\xf1\x00CN7_ SCC FHCUP      1.00 1.01 99110-AA000         ',
       b'\xf1\x00CN7_ SCC FNCUP      1.00 1.01 99110-AA000         ',
@@ -1427,12 +1428,14 @@ FW_VERSIONS = {
       b'\xf1\x8799110AA000\xf1\x00CN7_ SCC F-CUP      1.00 1.01 99110-AA000         ',
     ],
     (Ecu.eps, 0x7d4, None): [
+      #b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
       b'\xf1\x87\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf1\x00CN7 MDPS C 1.00 1.06 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 4CNDC106',
       b'\xf1\x8756310/AA070\xf1\x00CN7 MDPS C 1.00 1.06 56310/AA070 4CNDC106',
       b'\xf1\x8756310AA050\x00\xf1\x00CN7 MDPS C 1.00 1.06 56310AA050\x00 4CNDC106\xf1\xa01.06',
       b'\xf1\x00CN7 MDPS C 1.00 1.06 56310AA050\x00 4CNDC106',
     ],
     (Ecu.fwdCamera, 0x7c4, None): [
+      #b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262',
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.00 99210-AB000 200819',
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.03 99210-AA000 200819',
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.01 99210-AB000 210205',
@@ -1440,6 +1443,7 @@ FW_VERSIONS = {
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.03 99210-AB000 220426',
     ],
     (Ecu.abs, 0x7d1, None): [
+      #b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
       b'\xf1\x00CN ESC \t 101 \x10\x03 58910-AB800',
       b'\xf1\x8758910-AA800\xf1\x00CN ESC \t 104 \x08\x03 58910-AA800',
       b'\xf1\x8758910-AA800\xf1\x00CN ESC \t 105 \x10\x03 58910-AA800',
@@ -1455,6 +1459,7 @@ FW_VERSIONS = {
       b'\xf1\x87CXMQFM3806705JB2\x89\x87wwx\x88g\x86\x99\x87\x86xwwv\x88yv\x7f\xffz\xff\xff\xffV\x15\xf1\x89HT6VA640A1\xf1\x82CCN0N20NS5\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x873910607196',
       b'\xf1\x82CNCWD0AMFCXCSFFA',
       b'\xf1\x81HM6M2_0a0_FF0',
       b'\xf1\x82CNCVD0AMFCXCSFFB',
