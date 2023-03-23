@@ -1518,7 +1518,7 @@ FW_VERSIONS = {
     ],
     (Ecu.transmission, 0x7e1, None): [
       b'\xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #ursprungs getestet 1. im log
-      b'\xf1\x87954A22D000\xf1\x81T01E60A1  \xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2',
+      b'\xf1\x87954A22D000\xf1\x81T01E60A1  \xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #m1
       b'\xf1\x816U3J9051\x00\x00\xf1\x006U3H1_C2\x00\x006U3J9051\x00\x00HOS0G16DS1\x16\xc7\xb0\xd9',
     ],
     (Ecu.engine, 0x7e0, None): [
