@@ -1420,7 +1420,7 @@ FW_VERSIONS = {
  },
   CAR.ELANTRA_2021: {
     (Ecu.fwdRadar, 0x7d0, None): [
-      #b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      #b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00', #m1
       b'\xf1\x00CN7_ SCC F-CUP      1.00 1.01 99110-AA000         ',
       b'\xf1\x00CN7_ SCC FHCUP      1.00 1.01 99110-AA000         ',
       b'\xf1\x00CN7_ SCC FNCUP      1.00 1.01 99110-AA000         ',
@@ -1428,7 +1428,7 @@ FW_VERSIONS = {
       b'\xf1\x8799110AA000\xf1\x00CN7_ SCC F-CUP      1.00 1.01 99110-AA000         ',
     ],
     (Ecu.eps, 0x7d4, None): [
-      #b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18',
+      #b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18', #m1
       b'\xf1\x87\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf1\x00CN7 MDPS C 1.00 1.06 \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 4CNDC106',
       b'\xf1\x8756310/AA070\xf1\x00CN7 MDPS C 1.00 1.06 56310/AA070 4CNDC106',
       b'\xf1\x8756310AA050\x00\xf1\x00CN7 MDPS C 1.00 1.06 56310AA050\x00 4CNDC106\xf1\xa01.06',
@@ -1465,7 +1465,7 @@ FW_VERSIONS = {
       b'\xf1\x87CXMQFM3806705JB2\x89\x87wwx\x88g\x86\x99\x87\x86xwwv\x88yv\x7f\xffz\xff\xff\xffV\x15\xf1\x89HT6VA640A1\xf1\x82CCN0N20NS5\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.engine, 0x7e0, None): [
-      #b'\xf1\x873910607196',
+      #b'\xf1\x873910607196', #m1
       b'\xf1\x82CNCWD0AMFCXCSFFA',
       b'\xf1\x81HM6M2_0a0_FF0',
       b'\xf1\x82CNCVD0AMFCXCSFFB',
@@ -1475,52 +1475,54 @@ FW_VERSIONS = {
   },
   CAR.ELANTRA_HEV_2021: {
     (Ecu.fwdCamera, 0x7c4, None): [
-      b'\xf1\x00CN7HMFC  AT USA LHD 1.00 1.05 99210-AA000 210930', #m1
       b'\xf1\000CN7HMFC  AT USA LHD 1.00 1.03 99210-AA000 200819',
       b'\xf1\x00CN7HMFC  AT USA LHD 1.00 1.07 99210-AA000 220426',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [
-      b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00', #m1
       b'\xf1\000CNhe SCC FHCUP      1.00 1.01 99110-BY000         ',
       b'\xf1\x8799110BY000\xf1\x00CNhe SCC FHCUP      1.00 1.01 99110-BY000         ',
     ],
     (Ecu.eps, 0x7d4, None): [
-      b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18', #m
       b'\xf1\x00CN7 MDPS C 1.00 1.03 56310BY0500 4CNHC103',
       b'\xf1\x8756310/BY050\xf1\x00CN7 MDPS C 1.00 1.03 56310/BY050 4CNHC103',
       b'\xf1\x8756310/BY050\xf1\000CN7 MDPS C 1.00 1.02 56310/BY050 4CNHC102',
     ],
     (Ecu.transmission, 0x7e1, None): [
-      b'\xf1\x87954A22D000\xf1\x81T01E60A1  \xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #m1
       b'\xf1\0006U3L0_C2\000\0006U3K3051\000\000HCN0G16NS0\xb9?A\xaa',
       b'\xf1\0006U3L0_C2\000\0006U3K3051\000\000HCN0G16NS0\000\000\000\000',
       b'\xf1\x816U3K3051\000\000\xf1\0006U3L0_C2\000\0006U3K3051\000\000HCN0G16NS0\xb9?A\xaa',
       b'\xf1\x816U3K3051\x00\x00\xf1\x006U3L0_C2\x00\x006U3K3051\x00\x00HCN0G16NS0\x00\x00\x00\x00',
     ],
     (Ecu.engine, 0x7e0, None): [
-      b'\xf1\x873910607196', #m1
+
       b'\xf1\x816H6G5051\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x816H6G6051\x00\x00\x00\x00\x00\x00\x00\x00',
     ]
   },
   CAR.KONA_HEV: {
     (Ecu.abs, 0x7d1, None): [
+      b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400', # untested --> ursprung 1. im log
       b'\xf1\x00OS IEB \x01 104 \x11  58520-CM000',
     ],
     (Ecu.fwdRadar, 0x7d0, None): [
+      b'\xf1\x00BC3__               1.00 1.02 99110-Q0000\x00\x00\x00\x00\x00\x00\x00\x00\x00', #m1
       b'\xf1\x00OShe SCC FNCUP      1.00 1.01 99110-CM000         ',
     ],
     (Ecu.eps, 0x7d4, None): [
+      b'\xf1\x00BC3 MDPS C 1.00 1.04 56340-Q0100 0C18', #m1
       b'\xf1\x00OS  MDPS C 1.00 1.00 56310CM030\x00 4OHDC100',
     ],
     (Ecu.fwdCamera, 0x7c4, None): [
+      b'xf1\x00BC3 LKA  AT EUR LHD 1.00 1.02 99211-Q0100 262', #1
       b'\xf1\x00OSH LKAS AT KOR LHD 1.00 1.01 95740-CM000 l31',
     ],
     (Ecu.transmission, 0x7e1, None): [
+      b'\xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #ursprungs getestet 1. im log
       b'\xf1\x87954A22D000\xf1\x81T01E60A1  \xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2',
       b'\xf1\x816U3J9051\x00\x00\xf1\x006U3H1_C2\x00\x006U3J9051\x00\x00HOS0G16DS1\x16\xc7\xb0\xd9',
     ],
     (Ecu.engine, 0x7e0, None): [
+      b'\xf1\x873910607196', #m1
       b'\xf1\x816H6F6051\x00\x00\x00\x00\x00\x00\x00\x00',
     ]
   },
