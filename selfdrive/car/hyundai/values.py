@@ -1442,15 +1442,20 @@ FW_VERSIONS = {
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.06 99210-AA000 220111',
       b'\xf1\x00CN7 MFC  AT USA LHD 1.00 1.03 99210-AB000 220426',
     ],
+    # 21-12,2-2 , 1-1
     (Ecu.abs, 0x7d1, None): [
-      b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400',
+      b'\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400', # untested --> ursprung 1. im log
+      b'\xf1\x8758910-Q0400\xf1\x00BC ESC \x0e 102 \x11! 58910-Q0400', # untestet 2. im log
       b'\xf1\x00CN ESC \t 101 \x10\x03 58910-AB800',
       b'\xf1\x8758910-AA800\xf1\x00CN ESC \t 104 \x08\x03 58910-AA800',
       b'\xf1\x8758910-AA800\xf1\x00CN ESC \t 105 \x10\x03 58910-AA800',
       b'\xf1\x8758910-AB800\xf1\x00CN ESC \t 101 \x10\x03 58910-AB800\xf1\xa01.01',
     ],
     (Ecu.transmission, 0x7e1, None): [
-      b'\xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2',
+   
+      b'\xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #ursprungs getestet 1. im log
+      b'\xf1\x87954A22D000\xf1\x81T01E60A1  \xf1\x00T01960BL  T01E60A1  DBC3T10X2ME60YS5F\xad\xc6\xa2', #wahrscheinlich ungetestet 2. im log
+      ##b'\xf1\x87954A22D000\xf1\x81T01E60A1', #untest -> selber verkürzte verspn von 2. im log, gints norgends
       b'\xf1\x00HT6WA280BLHT6VA640A1CCN0N20NS5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
       b'\xf1\x00HT6WA280BLHT6VA640A1CCN0N20NS5\x00\x00\x00\x00\x00\x00\xe8\xba\xce\xfa',
       b'\xf1\x87CXMQFM2135005JB2E\xb9\x89\x98W\xa9y\x97h\xa9\x98\x99wxvwh\x87\177\xffx\xff\xff\xff,,\xf1\x89HT6VA640A1\xf1\x82CCN0N20NS5\x00\x00\x00\x00\x00\x00',
