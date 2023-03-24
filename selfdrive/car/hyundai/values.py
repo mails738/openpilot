@@ -1476,7 +1476,7 @@ FW_VERSIONS = {
       b'\xf1\x87CXMQFM3806705JB2\x89\x87wwx\x88g\x86\x99\x87\x86xwwv\x88yv\x7f\xffz\xff\xff\xffV\x15\xf1\x89HT6VA640A1\xf1\x82CCN0N20NS5\x00\x00\x00\x00\x00\x00',
     ],
     (Ecu.engine, 0x7e0, None): [
-      b'\xf1\x873910607196', #m1
+      #b'\xf1\x873910607196', #m1
       b'\xf1\x82CNCWD0AMFCXCSFFA',
       b'\xf1\x81HM6M2_0a0_FF0',
       b'\xf1\x82CNCVD0AMFCXCSFFB',
